@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Summary</title>
+
+        <!-- Fav Icon -->
+        <link rel="icon" type="image/svg" href="img/Sentient-io_fav.svg" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Google Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <div class="description">
+                    <div class="title">
+                        <img src="img/icon_text-summary.svg" alt="">
+                        <h1>Text Summary <sup class="tag">DEMO</sup> </h1>
+                    </div>
+
+                    <p>This demo app takes a block of long text input and summarise the input test in to sorter
+                        paragraph
+                        with lesser words and sentences.</p>
+                </div>
+                <aside>
+                    <a href="#" target="_parent" class="more-info">More Info</a>
+                    <a href="#" target="_parent" class="demo-app-code">Demo App Code</a>
+                </aside>
+            </header>
+
+            <section>
+                <!-- ----------------------- -->
+                <!-- Main Demo App Functions -->
+                <!-- ----------------------- -->
+                <div id="form">
+                    <span class="textarea-methods top">
+                        <p id='tryOutBtn' class="btn green" onclick="domElem.useInputExample()">Try out with sample
+                            text</p>
+                    </span>
+                    <textarea name="" id="textInput" rows="13"
+                        placeholder="Please input long paragraph of text, and click the summay button below to see the result."></textarea>
+                    <span class="textarea-methods">
+                        <small id="textCount">0 / 512 words</small>
+
+                        <button class="button-restart" id="restartBtn" onclick="restart()" style="display: none;">
+                            <span class="material-icons mr-xs">
+                                refresh
+                            </span>
+                            Restart
+                        </button>
+                        <button class="green" id="summaryTextBtn" onclick="summaryText()">Summarise Text</button>
+                        <button class="hov-red" onclick="domElem.emptyInput()">Clear text</button>
+                    </span>
+                </div>
+
+                <div id="textSumResult" style="display: none;">
+                    <h3 id="sumResTitle">Text Summary Result</h3>
+                    <p id="sumResTxt">Text Symmary Result</p>
+                </div>
+
+
+
+
+                <!-- -END- Main Demo App Functions -->
+            </section>
+        </main>
+
+
+        <div class="loader" id="loader">
+            <img src="img/sentie-loader.gif" alt="">
+        </div>
+
+
+        <footer>
+            <section>
+                <address>
+                    <p>
+                        Designed and built by
+                        <a href="https://www.sentient.io/" target="_parent">Sentient.io</a>
+                        with the help of our contributors.
+                    </p>
+                    <p>
+                        App version: 3.0.0 | Source code for app available
+                        <a href="#" target="_parent">here</a>
+                        .
+                    </p>
+                </address>
+
+                <a href="https://www.sentient.io/" target="_parent">
+                    <img src="img/sentient-logo.png" alt="Sentient.io logo" class="logo">
+                </a>
+            </section>
+
+        </footer>
+    </body>
+    <!-- Below jQuery can be ignored if you testing with your own API key -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="js/text-summarisation.js"></script>
+    <script src="js/main.js"></script>
+
+</html>
